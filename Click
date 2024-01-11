@@ -1,0 +1,19 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class T3640Clicker {
+    static  int counter = 0;
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Clicker");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 300);
+        frame.setLocationRelativeTo(null);
+        JLabel label = new JLabel("" + counter++, SwingConstants.CENTER);
+        label.setFont(new Font("Calibri", Font.BOLD, 50));
+        JButton button = new JButton("Click");
+        button.addActionListener(e -> label.setText("" + counter++));
+        frame.add(label);
+        frame.add(button, BorderLayout.SOUTH);
+        frame.setVisible(true);
+    }
+}
