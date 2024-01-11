@@ -1,0 +1,15 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class T3620FirstJLabel extends JFrame {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("FirstJLabel");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(600, 200);
+        frame.setLocationRelativeTo(null);
+        JLabel label = new JLabel("Моя первая надпись!, SwingConstants.CENTER");
+        label.setFont(new Font("Calibri", Font.ITALIC, 50));
+        frame.add(label);
+        frame.setVisible(true);
+    }
+}
